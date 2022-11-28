@@ -1,54 +1,17 @@
-# App Example
+# Chartmuseum
+* Reference: https://chartmuseum.com/
 
-This is a simple web server in Python Flask to demonstrate deployments using Helm and Skaffold.
+## Content
+* 'values.yaml'
+  * Set property variables for installing it
 
-## Components
-- `app.py`: Python Flask code
+## How to run it?
+  * `helm install chartmuseumrepo  stable/chartmuseum --values values.yaml`
+    * Problems:
+        * Problem1: "kubelet does not have ClusterDNS IP configured and cannot create Pod using "ClusterFirst" policy. Falling back to "Default" policy."
+            * Solution: ?
+  * `helm install stable/chartmuseum --name myrepo --values values.yaml`
+    * Problems:
+        * Problem1: "Error: INSTALLATION FAILED: must either provide a name or specify --generate-name:
+            * Solution: Run the previous command
 
-- `requirements.txt`: Python dependencies
-
-- `Dockerfile`
-
-- `helm-chart`: chart to deploy the app in Kubernetes
-
-- `skaffold.yaml`: Skaffold conf file
-
-- `build.sh`: script to automatically build and push the app
-
-- `deploy.sh`: script to automatically deploy any version in any environment
-
-## Build and push
-
-Edit build.sh to match your docker registry (default `localhost:32000`) and the name of your Helm repository (default `myrepo`)
-
-Then exec
-
-```
-./build.sh 1.0.0
-```
-
-To build and push a new version called `1.0.0`
-
-## Deploy with Helm
-
-Again edit deploy.sh to match your docker registry (default `localhost:32000`) and the name of your Helm repository (default `myrepo`)
-
-Then exec
-
-```
-./deploy.sh 1.0.0 development DEVLOPMENT_ENVIRONMENT
-```
-
-To deploy version `1.0.0` to a namespace called `development` (that must exist) and setting the env variable `CUSTOM_VAR` to `DEVLOPMENT_ENVIRONMENT`
-
-## Develop with Skaffold
-
-Just run
-
-```
-skaffold dev --port-forward
-```
-
-To deploy a new environment in Kubernetes for development. It will sync the app.py file and forward the port 5000 to your localhost.
-
-Just access the service in http://localhost:5000

@@ -1,0 +1,10 @@
+env:
+    open:
+        STORAGE: local
+persistence:
+    enabled: true
+    accessMode: ReadWriteOnce
+    size: 8Gi
+end:
+    open:
+        DISABLE_API: false
