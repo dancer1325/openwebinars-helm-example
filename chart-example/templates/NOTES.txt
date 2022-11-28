@@ -1,0 +1,1 @@
+Your release {{ .Release.Name }} was successfully deployed {{ .Release.Namespace }}
