@@ -1,6 +1,0 @@
-dependencies:
-- name: mongodb
-  version: 5.19.3
-  repository: https://kubernetes-charts.storage.googleapis.com/
-  tags:
-    - mongodb
