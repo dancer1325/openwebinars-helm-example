@@ -1,4 +1,5 @@
 {{- $deployName := printf "%s-%s" .Release.Name "server" -}}
+# - Remove the empty white line
 
 apiVersion: apps/v1
 kind: Deployment
@@ -29,6 +30,7 @@ spec:
         env:
           - name: foo
             value: bar
+          # Conditional to check if .Values.customVar exists, because if not, we would get an error from Kubernetes
           {{- if .Values.customVar }}
           - name: CUSTOM_VAR
             value: {{ .Values.customVar}}

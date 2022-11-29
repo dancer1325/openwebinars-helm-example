@@ -52,3 +52,10 @@ skaffold dev --port-forward
 To deploy a new environment in Kubernetes for development. It will sync the app.py file and forward the port 5000 to your localhost.
 
 Just access the service in http://localhost:5000
+
+## How to check if your chart works without deploying it?
+* Navigate to the Chart's folder
+* `helm install nametogivetothechart. --debug  --dry-run`
+* Problems:
+  * Problem1: "but missing in charts/ directory: mongodb"
+    * Solution: ?
