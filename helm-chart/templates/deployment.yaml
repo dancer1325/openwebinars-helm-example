@@ -1,5 +1,7 @@
 {{- $deployName := printf "%s-%s" .Release.Name "server" -}}
 # - Remove the empty white line
+# $deployName :=  ...         Initialize a variable, inferring the type
+# printf "%s-%s" FirstArgument SecondArgument ...   Way to pass arguments to printf
 
 apiVersion: apps/v1
 kind: Deployment
