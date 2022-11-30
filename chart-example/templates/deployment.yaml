@@ -20,3 +20,11 @@ spec:
         image: nginx:1.7.9
         ports:
         - containerPort: 80
+        env:
+            - name: foo
+              value: bar
+            # Check if the value is passed, previously to insert and fail the chart deployment
+            {{- if .Values.customVar }}
+            - name: CUSTOM_VAR
+              value: {{ .Values.customVar}}
+            {{- end}}
