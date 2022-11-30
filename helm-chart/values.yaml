@@ -2,4 +2,5 @@ replicas: 2
 # image:
 # podAnnotations:
 #   annotation1: value1
+#   annotation2: value2
 # customVar: test

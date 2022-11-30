@@ -17,7 +17,9 @@ spec:
         app: {{ $deployName }}
       {{- if .Values.podAnnotations }}
       annotations:
+        # Iterate through a map, like in Go, except adding $ to indicate it as dynamic template
         {{- range $key, $value := .Values.podAnnotations }}
+        # Next, it's to declare a map ?
         {{ $key | quote }}: {{ $value | quote }}
         {{- end }}
       {{- end }}
