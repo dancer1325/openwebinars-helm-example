@@ -1,6 +1,14 @@
-dependencies:
-- name: mongodb
-  version: 5.19.3
-  repository: https://kubernetes-charts.storage.googleapis.com/
-  tags:
-    - mongodb
+# Add required dependencies for your chart
+# This file isn't valid from helm >= 3
+# dependencies:
+# - name: mongodb
+#  version: 13.5.0
+  # Next repo doesn't exist anymore
+  # repository: https://kubernetes-charts.storage.googleapis.com/
+  # repository: https://github.com/mongodb/helm-charts
+  # repository: https://github.com/bitnami/charts/tree/main/bitnami
+  # version: &amp;amp;amp;amp;quot;7.14.3&amp;amp;amp;amp;quot;
+  # repository: &amp;amp;amp;amp;quot;https://charts.bitnami.com/bitnami&amp;amp;amp;amp;quot;
+  # repository: https://github.com/bitnami/charts/tree/main/bitnami/mongodb
+  # tags:
+  #  - mongodb
