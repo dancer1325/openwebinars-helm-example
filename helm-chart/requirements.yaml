@@ -1,5 +1,5 @@
 # Add required dependencies for your chart
-# This file isn't valid from helm >= 3
+# This file isn't valid from helm >= 3 https://helm.sh/docs/faq/changes_since_helm2/#consolidation-of-requirementsyaml-into-chartyaml
 # dependencies:
 # - name: mongodb
 #  version: 13.5.0
