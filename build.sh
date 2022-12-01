@@ -4,6 +4,7 @@ echo "Construyendo version: $VERSION"
 docker build -t "localhost:32000/myapp:$VERSION" .
 docker push "localhost:32000/myapp:$VERSION"
 # Problems: microk8s Get "http://localhost:32000/v2/": dial tcp [::1]:32000: connect: connection refused
+# Note: Supposedly, it's enabled with `microk8s enable registry`
 helm dependency update helm-chart
 # Download the chart's dependencies and add them to your chart
 helm push helm-chart --version="$VERSION" myrepo
