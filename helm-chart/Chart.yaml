@@ -4,13 +4,13 @@ description: A Helm chart for Kubernetes
 name: app-example
 version: 1.0.1
 dependencies:
-# TODO: Check, why next dependency is failing
 - name: mongodb
   version: 13.5.0
   # repository: https://github.com/bitnami/charts/tree/main/bitnami/mongodb
   # repository: https://github.com/bitnami/charts/tree/main/bitnami
   # repository: https://github.com/bitnami/charts
-  repository: https://github.com/bitnami
+  # repository: https://github.com/bitnami
+  repository: https://charts.bitnami.com/bitnami
   tags:
     - mongodb
 - name: mariadb
