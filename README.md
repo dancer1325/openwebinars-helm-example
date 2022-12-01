@@ -4,7 +4,16 @@
 ## Components
 * `app.py`: Python Flask code
 * `requirements.txt`: Python dependencies
+    * Problems:
+        * Problem1: "cannot import name 'Markup' from 'jinja2'"
+            * Solution: Use Flask==2.0.3
 * `Dockerfile`
+    * If you want to check manually  that all goes well
+        * `docker build -t nameOfTheImage .`
+            * .
+                * You should navigate to the directory in which the Dockerfile is placed
+            * Create the image
+        *
 * `helm-chart`: chart to deploy the app in Kubernetes
 * `skaffold.yaml`: Skaffold conf file
 * `build.sh`: script to automatically build and push the app
@@ -17,6 +26,15 @@
 ```
 ./build.sh 1.0.0
 ```
+    * Commentaries about the script
+        * `-t` Name for the tag
+    * `docker build -t nameOfTheImage .`
+        * .
+            * You should navigate to the directory in which the Dockerfile is placed
+        * Create the image
+    * `docker run -p 5000:5000 --name example test`
+        * Run the container and export the port
+        * Navigate to 'localhost:5000'
 
 ## Deploy with Helm
 * deploy.sh
@@ -25,6 +43,7 @@
 ```
 ./deploy.sh 1.0.0 development DEVLOPMENT_ENVIRONMENT
 ```
+
 
 ## Develop with Skaffold
 * Run

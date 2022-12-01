@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
+    # "Default" as default value, in case nothing is got
     return "Your CUSTOM_VAR is: %s <br> Version: 1.0.1 <br> Updated automatically!"%(os.getenv('CUSTOM_VAR', "Default") )
 
 if __name__ == '__main__':
