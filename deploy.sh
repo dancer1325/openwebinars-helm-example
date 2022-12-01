@@ -9,3 +9,4 @@ helm upgrade --install "$ENVIRONMENT-app-example" myrepo/app-example \
 --version $VERSION \
 --set image=localhost:32000/myapp:$VERSION \
 --set customVar=$CUSTOM_VAR
+# image     === image pushed to the docker registry

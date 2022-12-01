@@ -21,7 +21,8 @@
 
 ## Build and push
 * build.sh
-    * Edit it, to match your docker registry (default `localhost:32000`) and the name of your Helm repository (default `myrepo`)
+    * Edit it, to match your docker registry
+        * microk8s has got an own Docker registry (`localhost:32000`) and the name of your Helm repository (default `myrepo`). https://microk8s.io/docs/registry-built-in
     * exec, to build and push a new version called `1.0.0`
 ```
 ./build.sh 1.0.0
