@@ -3,6 +3,7 @@ kind: Config
 build:
   artifacts:
     - image: localhost:32000/myapp
+      # sync  local  -- with -- Kubernetes' cluster
       sync:
         manual:
         - src: "app.py"
@@ -16,6 +17,7 @@ deploy:
         values:
           image: localhost:32000/myapp
 
+# Create the tunnel between local and stage
 portForward:
 - resourceType: deployment
   resourceName: local-myapp-server
